@@ -44,7 +44,14 @@ empnopartitions=emp.rdd.getNumPartitions()
 
 emp_final= emp.where("salary > 50000")
 
-emp_final.show()
+# emp_final.show()
 
-print("Number of partitions for above dataframe is ",empnopartitions)
+# print("Number of partitions for above dataframe is ",empnopartitions)
 
+# writing emp final data into  csv file
+
+# emp_final.write.format("csv").save("/Users/praveen/Documents/pyspark/emp_salary_abv50k.csv")
+
+# schema for emp
+
+emp.printSchema()
